@@ -1,3 +1,8 @@
+def palindrome?(input)
+    clean = (input.scan /\w/).map { |x| x.downcase }
+    clean == clean.reverse
+end
+
 def count_words(string)
     r = {}
     string.split.each do |word|
@@ -10,7 +15,3 @@ def count_words(string)
     end
     r
 end
-
-
-puts count_words "A man, a plan, a canal -- Panama"
-puts count_words "Doo bee doo bee doo"
